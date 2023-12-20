@@ -6,6 +6,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { Post } from "../post.model";
 import { PostsService } from "../posts.service"
 import { Subscription } from "rxjs";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 
 @Component({
@@ -18,7 +19,9 @@ import { Subscription } from "rxjs";
     imports: [
         CommonModule,
         MatExpansionModule,
-        MatButtonModule
+        MatButtonModule,
+        HttpClientModule,
+        // HttpClient
     ]
 })
 export class PostListComponent implements OnInit, OnDestroy {
@@ -42,7 +45,7 @@ export class PostListComponent implements OnInit, OnDestroy {
     constructor(public postsService: PostsService) {    }
 
     ngOnInit() {
-        this.posts = this.postsService.getPosts();
+        this.postsService.getPosts();
         this.postsSub = this.postsService.getPostUpdateListener()
         .subscribe((posts: Post[])=> {
             this.posts = posts;

@@ -17,7 +17,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
     RouterOutlet, 
     PostCreateComponent,
     HeaderComponent,
-    PostListComponent,
+    PostListComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
