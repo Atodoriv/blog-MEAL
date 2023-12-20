@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
-
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -17,7 +17,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
     RouterOutlet, 
     PostCreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostListComponent,
+    //HttpClient
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
