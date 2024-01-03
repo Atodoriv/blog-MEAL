@@ -8,7 +8,7 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { HttpClient } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app.routes';
 
 
 @Component({
@@ -19,7 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
-    AppRoutingModule,
     
     //HttpClient
   ],
